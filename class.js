@@ -4,7 +4,7 @@ const speciesInput = document.getElementById('species')
 const breedInput = document.getElementById('breed')
 
 
-const myForm = document.getElementById('pet-form')
+
 
 
 class Pet {
@@ -15,6 +15,8 @@ class Pet {
     this.breed = _breed
   }
 }
+
+const myForm = document.getElementById('pet-form')
 
 myForm.addEventListener('submit', function (e) {
   e.preventDefault()
@@ -27,3 +29,7 @@ myForm.addEventListener('submit', function (e) {
 
   console.log('dati animale:', animale)
 })
+
+compareOwners(anotherPet){
+    return this.ownerName === anotherPet.ownerName
+}
