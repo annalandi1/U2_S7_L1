@@ -1,10 +1,3 @@
-const petNameInput = document.getElementById('petName')
-const ownerNameInput = document.getElementById('ownerName')
-const speciesInput = document.getElementById('species')
-const breedInput = document.getElementById('breed')
-
-
-
 
 
 class Pet {
@@ -16,7 +9,16 @@ class Pet {
   }
 }
 
+const PetsArray = []
+
 const myForm = document.getElementById('pet-form')
+const petNameInput = document.getElementById('petName')
+const ownerNameInput = document.getElementById('ownerName')
+const speciesInput = document.getElementById('species')
+const breedInput = document.getElementById('breed')
+
+
+
 
 myForm.addEventListener('submit', function (e) {
   e.preventDefault()
@@ -30,6 +32,6 @@ myForm.addEventListener('submit', function (e) {
   console.log('dati animale:', animale)
 })
 
-compareOwners(anotherPet){
+compareOwners(animale){
     return this.ownerName === anotherPet.ownerName
 }
